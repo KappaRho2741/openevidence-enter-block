@@ -12,7 +12,6 @@ OpenEvidenceではEnterキーで質問が即送信され、改行を入力する
 |------|------|
 | Enter | 改行を挿入 |
 | Cmd+Enter (Mac) | 送信 |
-| Shift+Enter | 送信（デフォルト動作） |
 | IME変換確定Enter | 変換確定のみ（改行なし・送信なし） |
 
 ## インストール
