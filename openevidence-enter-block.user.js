@@ -2,7 +2,7 @@
 // @name         OpenEvidence Enter Block
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
-// @description  Prevent Enter from submitting on OpenEvidence. Use Cmd+Enter to submit instead.
+// @description  OpenEvidenceでEnterによる誤送信を防止。Cmd+Enterで送信、Enterで改行。日本語IME対応。
 // @author       utsumitomki
 // @match        https://www.openevidence.com/*
 // @match        https://openevidence.com/*

@@ -1,35 +1,35 @@
 # OpenEvidence Enter Block
 
-Tampermonkey userscript that prevents accidental submission on [OpenEvidence](https://www.openevidence.com/) when pressing Enter.
+[OpenEvidence](https://www.openevidence.com/) でEnterキーを押すと即座に送信されてしまう問題を解決するTampermonkeyスクリプト。
 
-## Problem
+## 問題
 
-OpenEvidence submits your query when you press Enter, with no way to insert a newline. This is especially frustrating with Japanese IME, where Enter is used to confirm character conversion.
+OpenEvidenceではEnterキーで質問が即送信され、改行を入力する手段がない。日本語IMEでは変換確定にもEnterを使うため、変換しただけで送信されてしまう。
 
-## Solution
+## 解決
 
-| Key | Action |
-|-----|--------|
-| Enter | Insert newline |
-| Cmd+Enter (Mac) | Submit |
-| Shift+Enter | Submit (default behavior) |
-| IME Enter | Confirm conversion (no newline, no submit) |
+| キー | 動作 |
+|------|------|
+| Enter | 改行を挿入 |
+| Cmd+Enter (Mac) | 送信 |
+| Shift+Enter | 送信（デフォルト動作） |
+| IME変換確定Enter | 変換確定のみ（改行なし・送信なし） |
 
-## Install
+## インストール
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser
-2. Click the link below to install the script:
+1. [Tampermonkey](https://www.tampermonkey.net/) をブラウザにインストール
+2. 以下のリンクをクリックしてスクリプトをインストール:
 
-   **[Install openevidence-enter-block.user.js](https://github.com/utsumitomki/openevidence-enter-block/raw/main/openevidence-enter-block.user.js)**
+   **[openevidence-enter-block.user.js をインストール](https://github.com/utsumitomki/openevidence-enter-block/raw/main/openevidence-enter-block.user.js)**
 
-3. Tampermonkey will prompt you to install — click "Install"
+3. Tampermonkeyのインストール画面が表示されるので「インストール」をクリック
 
-## How it works
+## 仕組み
 
-OpenEvidence uses React with event delegation on `document`. The script registers a `keydown` listener on `window` in the capture phase, which fires before React's handler. Enter key events are intercepted and prevented from reaching React's submission logic.
+OpenEvidenceはReactのイベント委譲を `document` 上で使用している。本スクリプトは `window` のキャプチャフェーズに `keydown` リスナーを登録することで、Reactのハンドラより先にEnterキーイベントを横取りし、送信ロジックへの到達を阻止する。
 
-For IME input, the script uses `stopPropagation` without `preventDefault`, allowing character conversion to complete normally while still blocking submission.
+日本語IME入力時は `stopPropagation`（送信阻止）のみ実行し `preventDefault` を呼ばないことで、変換確定を正常に動作させつつ送信をブロックする。
 
-## License
+## ライセンス
 
 MIT
