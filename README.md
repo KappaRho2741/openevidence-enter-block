@@ -20,7 +20,7 @@ OpenEvidenceではEnterキーで質問が即送信され、改行を入力する
 1. [Tampermonkey](https://www.tampermonkey.net/) をブラウザにインストール
 2. 以下のリンクをクリックしてスクリプトをインストール:
 
-   **[openevidence-enter-block.user.js をインストール](https://github.com/utsumitomki/openevidence-enter-block/raw/main/openevidence-enter-block.user.js)**
+   **[openevidence-enter-block.user.js をインストール](https://github.com/KappaRho2741/openevidence-enter-block/raw/main/openevidence-enter-block.user.js)**
 
 3. Tampermonkeyのインストール画面が表示されるので「インストール」をクリック
 

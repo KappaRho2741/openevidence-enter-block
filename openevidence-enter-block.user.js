@@ -10,8 +10,8 @@
 // @grant        none
 // @run-at       document-idle
 // @license      MIT
-// @homepageURL  https://github.com/utsumitomki/openevidence-enter-block
-// @supportURL   https://github.com/utsumitomki/openevidence-enter-block/issues
+// @homepageURL  https://github.com/KappaRho2741/openevidence-enter-block
+// @supportURL   https://github.com/KappaRho2741/openevidence-enter-block/issues
 // ==/UserScript==
 
 (function() {
