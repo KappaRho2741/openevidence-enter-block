@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
 // @description  OpenEvidenceでEnterによる誤送信を防止。Cmd+Enterで送信、Enterで改行。日本語IME対応。
-// @author       utsumitomki
+// @author       KappaRho2741
 // @match        https://www.openevidence.com/*
 // @match        https://openevidence.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
